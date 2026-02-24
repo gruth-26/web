@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>forK</title>
+    <link rel="stylesheet" href="k.css">
+</head>
+<body>
+    <div class="rotating-page-wrapper">
+<div class="rotating-bg"></div>
+<div class="box" onclick="openBox()">
+    Click Me 💌
+</div>
+
+<div id="overlay" class="overlay">
+    <div class="big-box">
+        <span class="close-btn" onclick="closeBox()">✖</span>
+        
+        <h1><b>Hi, my princess 👑</b></h1>
+
+        <div class="scroll-content">
+            <p><h3><i>
+                Belated Happy Valentine's Day 💘 
+                <br><br>
+                I know Valentine’s Day already passed, but I didn’t want the day to go by without telling you something I’ve been meaning to say.
+                <br><br>
+                I always thank God for having someone like you in my life, Karyl. A lot of realizations and learnings I gained because of you.
+                <br><br>
+                Confessing to someone you like is not easy. I had a lot of overthinking first before I gathered myself to confess my feelings
+                <br><br>
+                to you. You might have felt weird, wondering how I could like someone I barely talked to before? But like what I told you before,
+                <br><br>
+                feelings are inevitable. You don't really choose who you fall for, sometimes it just happens unexpectedly. Of course, it did hurt
+                <br><br>
+                when you told me you love me as a friend. But at the same time, I truly appreciate your honesty. You respected me enough to be 
+                <br><br>
+                clear about your feelings. That means a lot to me. I understand that not everything we feel will always be returned the same way, 
+                <br><br>
+                and that’s okay, my love 😊. What matters to me is that I was honest about how I feel. I don’t regret telling you, because at 
+                <br><br>
+                least now my heart is clear. No matter what, I’m still grateful that you’re part of my life. You’ve helped me grow in ways you 
+                <br><br>
+                probably don’t even realize. And even if my feelings were not the same as yours, I will always respect you and wish you genuine 
+                <br><br>
+                happiness. I want you to know that I'm always here whenever you need someone to talk to, yung makakapag-rant ka about what 
+                <br><br>
+                happened about your day without worrying about being judged. And please take care always. I know na lagi ko itong sinasabi sa'yo,
+                <br><br>
+                but it's just that you really matter to me. So please always take care. I'll end my message here, bebi. Good luck with all the 
+                <br><br>
+                goals you want to achieve in life. I'll always be your No. 1 supporter. I love you, Karyl. 💖
+              </p></h3></i> 
+        </div>
+    </div>
+</div>
+
+<script>
+function openBox() {
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function closeBox() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+<audio id="bgMusic" loop>
+    <source src="mr.mp3" loop type="audio/mpeg">
+    <script>
+  document.addEventListener('click', function() {
+    const audio = document.getElementById('bgMusic');
+    audio.play();
+  }, { once: true });
+</script>
+</audio>
+</body>
+</html>

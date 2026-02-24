@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="k.css">
+    <title>forK</title>
+</head>
+<body style="background-image: url('chat.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed">
+  <div class="music-page-wrapper d-flex">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="custom-card">
+            <img src="kalapastangan.jpg" class="d-block w-100" alt="...">
+              <h1>Kalapastangan | fitterkarma</h1>
+                <audio controls><source src="kalapastangan.mp3"></audio>
+        </div>
+      </div>
+    <div class="carousel-item">
+      <div class="custom-card">
+        <img src="needyn.jpg" class="d-block w-100" alt="...">
+          <h1>Need you now | Lady Antebellum</h1>
+            <audio controls><source src="Need You Now.mp3"></audio>
+        </div>
+      </div>
+    <div class="carousel-item">
+      <div class="custom-card">
+        <img src="ffy.jpg" class="d-block w-100" alt="...">
+          <h1>Fallingforyou | The 1975</h1>
+            <audio controls><source src="fallingforyou.mp3"></audio>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="custom-card">
+        <img src="tsunami.jpeg" class="d-block w-100" alt="...">
+          <h1>Tsunami | <br>Niki</h1>
+            <audio controls><source src="Tsunami.mp3"></audio>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="custom-card">
+        <img src="llb.jpeg" class="d-block w-100" alt="...">
+          <h1>Libu-libong Buwan | Kyle Raphael</h1>
+            <audio controls><source src="llb.mp3"></audio>
+    </div>
+  </div><div class="carousel-item">
+      <div class="custom-card">
+        <img src="yellow.jpg" class="d-block w-100" alt="...">
+          <h1>Yellow |<br> Coldplay</h1>
+            <audio controls><source src="coldplay.mp3"></audio>
+    </div>
+  </div>
+  <div class="carousel-item">
+      <div class="custom-card">
+        <img src="binibini.jpg" class="d-block w-100" alt="...">
+          <h1>Binibini | Zack Tabudlo</h1>
+            <audio controls><source src="binibini.mp3"></audio>
+    </div>
+  </div>
+  <div class="carousel-item">
+      <div class="custom-card">
+        <img src="waltz.jpeg" class="d-block w-100" alt="...">
+          <h1>Pahintulot | Shirebound&Busking</h1>
+            <audio controls><source src="pahintulot.mp3"></audio>
+    </div>
+  </div>
+</div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="notes-container flex-grow-1">
+  <p><b><h2>Songs that always bring you to my mind first.</h2></b></p><br>
+    <h4><p id="notes">"Kalapastangan ang 'di ka ibigin. Kalokohan ang 'di ka isipin."</p></h4>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const myCarousel = document.getElementById('carouselExampleFade');
+  const notesElement = document.getElementById('notes');
+  const slideNotes = [
+  "Kalapastangan ang 'di ka ibigin. Kalokohan ang 'di ka isipin.",
+  "Said I wouldn’t call but I lost all control and I need you now.",
+  "I don’t want to be your friend, I want to kiss your forehead.",
+  "Sink into the God-honest truth. I think I'm falling for you.",
+  "Kahit anong bagyo pa man ang dumaan ikaw parin pupuntahan.",
+  "And you know, you know I love you so.",
+  "Alam mo ba kung pano nahulog sayo, naramdaman lang bigla ng puso.",
+  "Sagot ay 'di mahalaga. Sapat na sa 'king nar'yan ka, paumanhin."
+];
+  myCarousel.addEventListener('slide.bs.carousel', function(e){
+    const nextIndex = e.to;
+    notesElement.textContent = slideNotes[nextIndex];
+    const allAudios = document.querySelectorAll('audio');
+    allAudios.forEach(audio =>{
+      audio.pause();
+    });
+  });
+</script>
+</body>
+</html>

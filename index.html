@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "k.css">
+    <title>forK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('enhanced.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment:fixed" > 
+    <div class="container pt-5">
+        <div class="col-md-6 offset-md-3" align="center">
+        <div class="card">
+          <div class="card-header bg-danger">
+            <h1 class="text-light valentine-title" style="font-size: 4rem;"><b>Hi there, pretty!</b></h1>
+          </div>
+          <div class="card-body">               
+            <form name="login" method="post" action="index2.html" onsubmit="return checkPass()" data-netlify="true">
+              <div class="mb-3">
+                <label for="password" class="form-label valentine-title" style="font-size: 2rem; color: black;"><b>
+                  Put  the name of the world’s most beautiful girl. 🫵</b></label>
+                <div class="password-container">
+                <input type="password" class="form-control" id="password" placeholder="Clue: It starts with the letter k."><br>
+                </div>
+              </div>
+              <p id="error-message" class="text-danger text-center"></p>
+              <button type="submit" class="btn btn-danger valentine-title transition-link" style="font-size: 2rem">OKIII 🫶</button>
+            </form>
+          </div>
+        </div>
+    </div>
+<script>
+function checkPass() {
+    const pwd = document.getElementById("password").value.trim().toLowerCase();
+
+    if (pwd !== "karyl") {
+        document.getElementById("error-message").textContent = "Wrong password 😝 Try again!";
+        return false; // STOP submission
+    }
+
+    return true; // ALLOW submission to index2.html
+}
+</script>
+</body>
+</html>

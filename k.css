@@ -1,0 +1,348 @@
+.buttons {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.button-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.sub-text{
+    color: rgb(41, 35, 35);
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+.buttons .btn{
+    padding: 10px 20px;
+    margin: 15px;
+    border-style:groove;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    gap: 50px;
+    background-color:crimson;
+}
+.buttons .btn:hover {
+     transform: translateY(-10px);
+    box-shadow: 0 30px 20px rgba(0,0,0,0.3);
+}
+.valentine-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 100px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.text-light {
+    display: inline-block;
+    animation: heartbeat 3s infinite;
+    color: rgb(224, 145, 159);
+}
+.card{
+    margin-top: 80px;
+    border-style:groove;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    gap: 50px;
+    box-shadow: 0 30px 20px rgba(0,0,0,0.3);
+}
+.cat3{
+    margin-top: -250px;
+    margin-left: 20px;
+    height: 500px;
+    width: 400px;
+}
+.cat4{
+    margin-top: -250px;
+    margin-left: 500px;
+    height: 500px;
+    width: 400px;
+}
+.k{
+    margin-left: 50px;
+    height: 650px;
+    width: 350px;
+}
+.vid {
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    gap: 40px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+}
+.vid {
+     display: flex;
+    align-items: center;   
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+.click{
+    background-color: rgb(121, 56, 56);
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 50px;
+    z-index: 10;
+}
+.carousel{
+    width: 400px;
+    margin: 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    overflow: visible;
+}
+.carousel-inner img{
+    border-radius: 20px;
+    height: 600px;
+    object-fit: cover;
+}
+.carousel-control-prev {
+    left: -80px; 
+}
+.carousel-control-next {
+    right: -80px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+.side-img{
+    width: 300px;
+}
+.bounce{
+    animation: bounce 3s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+.left-img{
+    margin-right: 120px;
+}
+.right-img {
+    animation-delay: 0.75s;
+    margin-left: 120px;
+}
+.custom-card{
+    width: 400px;
+    margin: 80px auto; 
+    background-color: rgb(235, 177, 170);
+    box-shadow: 0px 0px 20px black;
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px 20px;
+    transition: 1s;
+}
+.custom-card img{
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.note{
+    margin: 0;
+    height: 100vh;
+    background-image: url(note.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.music-page-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.music-page-wrapper .carousel{
+    margin: auto;
+    overflow: visible;
+}
+.music-page-wrapper .carousel-control-prev{
+    left: -80px;
+    width: 50px;
+}
+.music-page-wrapper .carousel-control-next{
+    right: -80px;
+    width: 50px;
+}
+.box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.big-box {
+    background: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.scroll-content {
+    overflow-y: auto;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.rotating-page-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.rotating-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200vmax;
+    height: 200vmax;
+    background-image: url(grtty.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: tiltBG 15s ease-in-out infinite;
+}
+@keyframes tiltBG {
+    0% {
+        transform: translate(-50%, -50%) rotate(-4deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(4deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-4deg);
+    }
+}
+.music-page-wrapper {
+  display: flex;
+  align-items: right;
+  gap: 20px; 
+}
+#carouselExampleFade {
+  max-width: 600px; 
+}
+.notes-container {
+  position: absolute;
+  font-style: italic;
+  font-size: large;
+  top: 200px;
+  right: 50px;
+  width: 300px; 
+  background: rgba(255,255,255,0.8);
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.daily-quote-app {
+    background-color: #ffe6e6; 
+    color: #800000; 
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.daily-quote-app .dq-heading {
+    color: #b30000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.daily-quote-app .dq-display {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffd6d6; 
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 40%;
+    overflow-y:auto ;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+}
+.daily-quote-app .dq-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.daily-quote-app .dq-button:hover {
+    background-color: #e60000; 
+    transform: scale(1.05);
+}
+.daily-quote-app .dq-button:active {
+    transform: scale(0.95);
+}

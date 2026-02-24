@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>forK</title>
+    <link rel="stylesheet" href="k.css">
+</head>
+<body>
+    <div class="daily-quote-app">
+    <h1 class="dq-heading">Your Quote for today 🥰</h1>
+    <button class="dq-button" onclick="showQuote()">Get Today's Quote</button>
+    <p class="dq-display"></p>
+</div>
+<script>
+const quotes = [
+    "Success begins the moment you refuse to give up.", 
+    "You are stronger than your excuses.", 
+    "Your future is built by what you do today.",
+    "Fear is temporary. Regret lasts longer.", 
+    "Dreams demand effort, not just wishes.",
+    "Great things take patience and persistence.", 
+    "Every expert was once a beginner.", 
+    "Success loves consistency.", 
+    "Focus on improvement, not approval.", 
+    "Push through! Your breakthrough is near.",
+    "Work quietly. Let results speak.", 
+    "Pray about it, then work for it.", 
+    "Faith turns obstacles into opportunities.", 
+    "When you give your best, God does the rest.", 
+    "Seek God first, and everything else will follow.",
+    "Your worth isn’t measured by someone else’s opinion.", 
+    "Keep praying, God is listening.", 
+    "Haters are proof you’re doing something right.", 
+    "Don’t shrink to fit someone else’s comfort.", 
+    "Your peace is more important than proving a point.",
+    "I love you.", 
+    "Take care of your mind like you take care of your goals.", 
+    "Your feelings are valid.", 
+    "You don’t have to carry everything alone.", 
+    "It’s okay to say “not today.”",
+    "You are allowed to take a break.", 
+    "Skipping meals doesn’t make you stronger — nourishing yourself does.", 
+    "Have a great day! Eat on time, pretty.", 
+    "Studying is easier when you’re properly fueled.", 
+    "Family is built on love, not perfection.",
+    "No matter where you go, family is with you."
+];
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+function showQuote() {
+    const today = new Date().toDateString();
+    const display = document.querySelector('.daily-quote-app .dq-display');
+    let savedDate = localStorage.getItem("savedDate");
+    let order = JSON.parse(localStorage.getItem("quoteOrder"));
+    let index = parseInt(localStorage.getItem("quoteIndex"));
+    if (!order) {
+        order = shuffle([...quotes]);
+        localStorage.setItem("quoteOrder", JSON.stringify(order));
+        localStorage.setItem("quoteIndex", 0);
+        localStorage.setItem("savedDate", today);
+        display.innerText = order[0];
+        return;
+    }
+    if (savedDate !== today) {
+        index++;
+        if (index >= quotes.length) {
+            order = shuffle([...quotes]);
+            index = 0;
+            localStorage.setItem("quoteOrder", JSON.stringify(order));
+        }
+        localStorage.setItem("quoteIndex", index);
+        localStorage.setItem("savedDate", today);
+    }
+    display.innerText = order[index];
+}
+</script>
+</body>
+</html>

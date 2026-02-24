@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "k.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    <title>forK</title>
+</head>
+<body align="center"style="background-image: url('enhanced.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="container">
+    <h1 class="text-light mb-0 valentine-title align-items: center" style="text-shadow: -2px -2px 0 #272020, 2px -2px 0 #272020, -2px 2px 0 #272020, 2px 2px 0 #272020;">Happy Valentine's <br>Day, Karyl 💘</h1>
+</div>
+<img src="cat3.png" class="cat3">
+<img src="cat4.png" class="cat4">
+    <div class="buttons" align="center">
+        <div class="button-group">
+        <button type="button" id="quotes" class="btn btn-quotes valentine-title"><b>Quotes 💬</b></button>
+            <script>
+                document.getElementById("quotes").addEventListener("click", function() {
+                    document.body.classList.add('fade-out');
+                        setTimeout(function() {
+                        window.location.href = "quotes.html";
+                    }, 300);
+                });
+            </script>
+        <button type="button" id="message" class="btn btn-message valentine-title"><b>Message 💌</b></button>
+            <script>
+                document.getElementById("message").addEventListener("click", function() {
+                    document.body.classList.add('fade-out');
+                        setTimeout(function() {
+                        window.location.href = "message.html";
+                    }, 300);
+                });
+            </script>
+        <button type="button" id="songs" class="btn btn-songs valentine-title"><b>Songs 🎵</b></button>
+            <script>
+                document.getElementById("songs").addEventListener("click", function() {
+                    document.body.classList.add('fade-out');
+                        setTimeout(function() {
+                        window.location.href = "songs.html";
+                    }, 300);
+                });
+            </script>
+        <button type="button" id="gallery" class="btn btn-gallery valentine-title"><b>Gallery 🖼️</b></button>
+            <script>
+                document.getElementById("gallery").addEventListener("click", function() {
+                    document.body.classList.add('fade-out');
+                        setTimeout(function() {
+                        window.location.href = "gallery.html";
+                    }, 300);
+                });
+            </script>
+        </div>
+        <p class="sub-text"><b>Here's a present for you !</b></p>
+    </div>
+</body>
+</html>
