@@ -17,7 +17,7 @@
             <h1 class="text-light valentine-title" style="font-size: 4rem;"><b>Hi there, pretty!</b></h1>
           </div>
           <div class="card-body">               
-            <form name="login" method="post" action="index2.html" onsubmit="return checkPass()" data-netlify="true">
+            <form name="login" action="index2.html" onsubmit="return checkPass()">
               <div class="mb-3">
                 <label for="password" class="form-label valentine-title" style="font-size: 2rem; color: black;"><b>
                   Put  the name of the world’s most beautiful girl. 🫵</b></label>
@@ -37,10 +37,10 @@ function checkPass() {
 
     if (pwd !== "karyl") {
         document.getElementById("error-message").textContent = "Wrong password 😝 Try again!";
-        return false; // STOP submission
+        return false; 
     }
 
-    return true; // ALLOW submission to index2.html
+    return true; 
 }
 </script>
 </body>
