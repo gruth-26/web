@@ -346,15 +346,23 @@
 .daily-quote-app .dq-button:active {
     transform: scale(0.95);
 }
+.rotate-device {
+  display: none;
+}
 @media screen and (orientation: portrait) {
-  body {
-    transform: rotate(90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .rotate-device {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    z-index: 9999;
+  }
+
+  body > *:not(.rotate-device) {
+    display: none;
   }
 }

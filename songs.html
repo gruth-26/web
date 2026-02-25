@@ -8,6 +8,9 @@
     <title>forK</title>
 </head>
 <body style="background-image: url('chat.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed">
+  <div class="rotate-device">
+  Please rotate your device to landscape
+</div>
   <div class="music-page-wrapper d-flex">
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
       <div class="carousel-inner">
@@ -66,6 +69,13 @@
             <audio controls><source src="pahintulot.mp3"></audio>
     </div>
   </div>
+  <div class="carousel-item">
+      <div class="custom-card">
+        <img src="coffee.jpeg" class="d-block w-100" alt="...">
+          <h1>Coffee |<br>Miguel</h1>
+            <audio controls><source src="coffee.mp3"></audio>
+    </div>
+  </div>
 </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -93,7 +103,8 @@
   "Kahit anong bagyo pa man ang dumaan ikaw parin pupuntahan.",
   "And you know, you know I love you so.",
   "Alam mo ba kung pano nahulog sayo, naramdaman lang bigla ng puso.",
-  "Sagot ay 'di mahalaga. Sapat na sa 'king nar'yan ka, paumanhin."
+  "Sagot ay 'di mahalaga. Sapat na sa 'king nar'yan ka, paumanhin.",
+  "Coffee in the morning. I don't wanna wake you. I just wanna watch you sleep."
 ];
   myCarousel.addEventListener('slide.bs.carousel', function(e){
     const nextIndex = e.to;
