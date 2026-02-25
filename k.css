@@ -1,8 +1,5 @@
 .buttons {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,16 +59,21 @@
     box-shadow: 0 30px 20px rgba(0,0,0,0.3);
 }
 .cat3{
-    margin-top: -250px;
-    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 500px;
     width: 400px;
 }
 .cat4{
-    margin-top: -250px;
-    margin-left: 500px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 500px;
     width: 400px;
+}
+.container{
+    position: relative;
 }
 .k{
     margin-left: 50px;
@@ -374,4 +376,5 @@ html, body {
 .app-wrapper {
   width: 1200px;
   margin: auto;
+  position: relative;
 }
