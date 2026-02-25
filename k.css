@@ -1,5 +1,5 @@
 .buttons {
-    margin-top: 80px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,15 +60,15 @@
 }
 .cat3{
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -40px;
+    bottom: -150px;
     height: 500px;
     width: 400px;
 }
 .cat4{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -40px;
+    bottom: -150px;
     height: 500px;
     width: 400px;
 }
@@ -283,16 +283,28 @@
   align-items: right;
   gap: 20px; 
 }
+@media screen and (max-width: 768px) {
+  .music-page-wrapper {
+    flex-direction: row; /* keep side by side */
+    justify-content: center;
+    flex-wrap: wrap; /* allow wrapping if too narrow */
+    gap: 15px;
+  }
+}
 #carouselExampleFade {
-  max-width: 600px; 
+  max-width: 90%; 
+  flex: 1 1 300px;
 }
 .notes-container {
-  position: absolute;
+  position: relative;
   font-style: italic;
   font-size: large;
-  top: 200px;
-  right: 50px;
-  width: 300px; 
+  top: auto;
+  right: auto;
+  flex: 1 1 200px;
+  width: auto; 
+  max-width: 300px;
+  margin-top: 0;
   background: rgba(255,255,255,0.8);
   padding: 15px;
   border-radius: 10px;
